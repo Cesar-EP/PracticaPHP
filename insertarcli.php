@@ -10,6 +10,6 @@
     mysqli_query ($mysqli, $sqlinsert);
     
 
-    header("location:./index.php?insert=success");
+    header("location:./cliente.php?insert=success");
 
 ?>

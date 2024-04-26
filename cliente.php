@@ -17,7 +17,7 @@
 <h2>Tabla de Clientes</h2>
 
  
-<form action="insertar.php" method="post">
+<form action="insertarcli.php" method="post">
     <br>
     Nombre
     <input type="text" name="nombre">
@@ -25,7 +25,50 @@
     Apellido
     <input type="text" name="apellido">
     <br>
-    <button type="submit" name="gaurdar">insertar</button>
+    <button type="submit" name="guardar">insertar</button>
 </form>
+
+<form action="updatecli.php" method="post">
+    <input type="text" name="id" placeholder="ID">
+    <button type="submit" name="update">Editar</button>
+    </form>
+
+<table  border ="2">
+    <tr>
+    <th>id</th>
+    <th>nombre</th> 
+    <th>apellido</th>
+   
+
+
+    </tr>
+
+<?php 
+    include_once 'conectar.php';
+   
+    
+        $query = "SELECT * from cliente";
+        $data = mysqli_query($mysqli, $query);
+        $total = mysqli_num_rows($data);
+    
+        if($total!=0){
+            while($row=mysqli_fetch_assoc($data)){
+    
+                  
+                echo "<tr> <td>" . $row['id'] . "</td> <td>" . $row['nombre'] . "</td> <td>" 
+                . $row['apellido'] .  "</td>
+                <td> <a href='borrarcli.php?rn=$row[id]'>BORRAR</a></td></tr>"; 
+                  
+    
+    
+            }
+    
+        }
+    
+    ?>
+
+</table>
+
+
 </body>
 </html>
