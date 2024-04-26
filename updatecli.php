@@ -15,7 +15,7 @@ use LDAP\Result;
             if ($resultCheck > 0 ){
                 $row = mysqli_fetch_assoc($result);
                 $nombre = $row['nombre'];
-                $apellido = $row['apellido'];
+                $apellido = $row['Apel'];
                 
 
             }
@@ -27,13 +27,13 @@ use LDAP\Result;
 <form action="actualizarcli.php" method="post">
     <br>
     ID
-    <input type="text" name="ID" value="<?php echo $id?>">
+    <input type="text" name="id" value="<?php echo $id?>">
     <br>
     nombre
     <input type="text" name="nombre" value="<?php echo $nombre ?>">
     <br>
     apellido
-            <input type="text" name="apellido" value="<?php echo $apellido ?>">
+            <input type="text" name="Apel" value="<?php echo $apellido ?>">
     <br>
     <button type="submit" name="Guardar">insertar</button>
     <br>

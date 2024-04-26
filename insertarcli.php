@@ -2,7 +2,7 @@
     include_once 'conectar.php';
 
     $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
+    $apellido = $_POST['Apel'];
 
 
     $sqlinsert = "INSERT INTO cliente values(0,'$nombre','$apellido');";

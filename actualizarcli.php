@@ -8,7 +8,7 @@
     
         $id = $_POST['id'];
     
-        $query = "UPDATE `cliente` SET nombre='$_POST[nombre]', apellido='$_POST[apellido]' where id='$_POST[id]'";
+        $query = "UPDATE `cliente` SET nombre='$_POST[nombre]', Apel='$_POST[Apel]' where id='$_POST[id]'";
         mysqli_query($mysqli, $query);
        
     }
