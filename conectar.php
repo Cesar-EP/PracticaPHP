@@ -1,11 +1,10 @@
 <?php
-$mysqlli = new mysqli("localhost", "root", "","tablasp");
+$mysqli = new mysqli("localhost","root","","tablasp2");
 
 
-if ($mysqlli->connect_errno){
+if ($mysqli->connect_errno){
 
-echo "fallo a connectar a MySQL: (" .  i->connect_errno . ") " . $mysqli -> connect_error; 
-
+    echo "fallo al conectar con MySql: (". $mysqli->connect_errno . " )" . $mysqli->connect_errno;
 
 
 }

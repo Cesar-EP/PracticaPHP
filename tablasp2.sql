@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2024 a las 18:10:31
+-- Tiempo de generación: 26-04-2024 a las 18:43:06
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.0.30
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `tablasp`
+-- Base de datos: `tablasp2`
 --
 
 -- --------------------------------------------------------
@@ -30,10 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `apellido` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `telefono` char(12) NOT NULL
+  `Apel` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nombre`, `Apel`) VALUES
+(1, 'Cesar', 'yO'),
+(2, 'Cesar', 'pe;na'),
+(3, 'Juan', 'Bautista');
 
 -- --------------------------------------------------------
 
@@ -43,10 +50,8 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `empleado` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `apellido` varchar(100) NOT NULL,
-  `puesto` varchar(100) NOT NULL,
-  `telefono` char(12) NOT NULL
+  `Nombre` varchar(100) NOT NULL,
+  `Apellido` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -57,8 +62,8 @@ CREATE TABLE `empleado` (
 
 CREATE TABLE `producto` (
   `id` int(11) NOT NULL,
-  `nombreproducto` varchar(100) NOT NULL,
-  `descripcion` varchar(150) NOT NULL
+  `nombre` varchar(100) NOT NULL,
+  `Descripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -86,6 +91,12 @@ ALTER TABLE `producto`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `empleado`
