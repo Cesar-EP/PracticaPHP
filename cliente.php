@@ -19,7 +19,13 @@
     <input type="text" name="nombre">
     <br>
     Apellido
-    <input type="text" name="Apel">
+    <input type="text" name="apellido">
+    <br>
+    Telefono
+    <input type="text" name="telefono">
+    <br>
+    Correo
+    <input type="text" name="correo">
     <br>
     <button type="submit" name="guardar">insertar</button>
 </form>
@@ -37,6 +43,8 @@
     <th>id</th>
     <th>nombre</th> 
     <th>apellido</th>
+    <th>telefono</th>
+    <th>correo</th>
    
 
 
@@ -54,7 +62,7 @@
             while($row=mysqli_fetch_assoc($data)){
     
                   
-                echo "<tr> <td>" . $row['id'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['Apel'] .  "</td>
+                echo "<tr> <td>" . $row['id'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] ."</td> <td>".$row['telefono']. "</td> <td>". $row['correo'] ."</td> <td>". "</td>
                 <td> <a href='borrarcli.php?rn=$row[id]'>BORRAR</a></td></tr>"; 
                   
     

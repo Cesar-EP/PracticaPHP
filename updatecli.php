@@ -1,4 +1,7 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
 <?php
 
@@ -15,7 +18,9 @@ use LDAP\Result;
             if ($resultCheck > 0 ){
                 $row = mysqli_fetch_assoc($result);
                 $nombre = $row['nombre'];
-                $apellido = $row['Apel'];
+                $apellido = $row['apellido'];
+                $telefono = $row['telefono'];
+                $correo = $row['correo'];
                 
 
             }
@@ -33,8 +38,9 @@ use LDAP\Result;
     <input type="text" name="nombre" value="<?php echo $nombre ?>">
     <br>
     apellido
-            <input type="text" name="Apel" value="<?php echo $apellido ?>">
+            <input type="text" name="apellido" value="<?php echo $apellido ?>">
     <br>
+            <input type="text" name="telefono" value="<>">
     <button type="submit" name="Guardar">insertar</button>
     <br>
 </form> 

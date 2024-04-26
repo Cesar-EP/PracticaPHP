@@ -5,7 +5,7 @@
     $apellido = $_POST['Apel'];
 
 
-    $sqlinsert = "INSERT INTO cliente values(0,'$nombre','$apellido');";
+    $sqlinsert = "INSERT INTO cliente values(0,'$nombre','$apellido','$telefono','$correo');";
     //ECHO $sqlinsert;
     mysqli_query ($mysqli, $sqlinsert);
     

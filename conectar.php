@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost","root","","tablasp2");
+$mysqli = new mysqli("localhost","root","","tablasp3");
 
 
 if ($mysqli->connect_errno){
