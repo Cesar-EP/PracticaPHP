@@ -40,16 +40,16 @@ use LDAP\Result;
     apellido
             <input type="text" name="apellido" value="<?php echo $apellido ?>">
     <br>
-            <input type="text" name="telefono" value="<>">
+    telefono
+            <input type="text" name="telefono" value="<?php echo $telefono?>">
+    <br>
+    correo
+            <input type="text" name="correo" value="<?php echo $correo?>">
+            <br>
     <button type="submit" name="Guardar">insertar</button>
     <br>
 </form> 
 
-<?php 
-
-
-
-?>
 
 </body>
 </html>
